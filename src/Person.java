@@ -13,12 +13,20 @@ public abstract class Person {
         this.partner = partner;
     }
 
-    public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
-    public String getLastName(){
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
 
     public int getAge(){
@@ -29,12 +37,19 @@ public abstract class Person {
         this.age = age;
     }
 
+    public String getPartner(){return partner;}
+
+    public void setPartner(String partner){
+        this.partner = partner;
+    }
+
     public boolean isRetired() {
         if (getAge() > retirementAge){
             return true;
         }
         return false;
     }
+
     public void registerPartnership(String lastName){
         previousLastName = this.lastName;
         this.lastName = lastName;
